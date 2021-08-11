@@ -183,15 +183,14 @@ function checkVictory() {
 }
 
 function clear() {
-  overGame = false;
-  bombs = [];
-  numbers = [];
-  endscreen.innerHTML = '';
-  endscreen.classList.remove('show');
-  cells.forEach(cell => {
+    overGame = false;
+    bombs = [];
+    numbers = [];
+    endscreen.innerHTML = '';
+    endscreen.classList.remove('show');
+    cells.forEach(cell => {
     cell.remove();
   });
-
   setup();
 }
 

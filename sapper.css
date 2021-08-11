@@ -15,9 +15,6 @@
   transition: 0.4s all;
   color: #07580d;
 }
-.difficulty.active {
-  background: #07580d;
-}
 .settings input[type="radio"] + label {
   margin: 12px 14px 12px 22px;
 }
@@ -37,7 +34,7 @@
 .settings input[type="radio"] + label:before {
   border-radius: 50%;
 }
-.settings input[class="difficulty active"] + label:before {
+.settings input[type="radio"]:checked + label:before {
   background: #07580d;
 }
 .left {
@@ -53,7 +50,7 @@
   height: 50px;
   margin-bottom: 20px;
   text-align: center;
-  font-family: 'Cookie', cursive;
+  font-family: "Cookie", cursive;
   background-color: #07580d;
   border-radius: 2px;
   font-size: 20px;
@@ -135,7 +132,7 @@
   font-size: 40px;
   display: none;
   color: red;
-  font-family: 'Cookie', cursive;
+  font-family: "Cookie", cursive;
 }
 .endscreen .show {
   display: block;
@@ -143,7 +140,6 @@
 .endscreen span {
   color: green;
 }
-
 
 /* adaptive */
 @media screen and (max-width: 767px) {
