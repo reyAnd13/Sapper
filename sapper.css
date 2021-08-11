@@ -1,8 +1,3 @@
-* {
-  --cellSize: 50px;
-  --boardSize: 0px;
-}
-
 /* settings menu */
 .settings fieldset {
   border: none;
@@ -42,7 +37,7 @@
 .settings input[type="radio"] + label:before {
   border-radius: 50%;
 }
-.settings input[type="radio"]:checked + label:before {
+.settings input[class="difficulty active"] + label:before {
   background: #07580d;
 }
 .left {
@@ -75,11 +70,18 @@
   background-color: #333333;
   color: #fff;
 }
+.right {
+  display: inline-block;
+  width: 48%;
+  text-align: right;
+}
 
 /* game board */
 .board {
   background: #e2e2e2;
   position: relative;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -90,13 +92,13 @@
 }
 .board .cell {
   background: #e2e2e2;
-  width: var(--cellSize);
-  height: var(--cellSize);
+  width: 50px;
+  height: 50px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(var(--cellSize) * 0.8);
+  font-size: calc(50px * 0.8);
   cursor: pointer;
   user-select: none;
   font-family: Tahoma, sans-serif;
@@ -119,10 +121,10 @@
   cursor: default;
 }
 .board .cell--bomb {
-  font-size: calc(var(--cellSize) * 0.5);
+  font-size: calc(50px * 0.5);
 }
 .board .cell--flagged {
-  font-size: calc(var(--cellSize) * 0.5);
+  font-size: calc(50px * 0.5);
 }
 
 /* inscription end game */
@@ -141,11 +143,7 @@
 .endscreen span {
   color: green;
 }
-.right {
-  display: inline-block;
-  width: 48%;
-  text-align: right;
-}
+
 
 /* adaptive */
 @media screen and (max-width: 767px) {
