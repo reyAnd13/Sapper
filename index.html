@@ -5,17 +5,20 @@
   <title>Сапёр</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="sap.css">
+  <link rel="stylesheet" href="sapper.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="left">
     <div class="settings">
-      <input type="radio" id="easy" value="0.1" class="difficulty">
+      <input type="radio" id="easy" name="difficulty" value="0.1" class="difficulty">
       <label for="easy">Легко</label>
-      <input type="radio" id="normal" value="0.2" class="difficulty active">
+      <input type="radio" id="normal" name="difficulty" value="0.2" class="difficulty active">
       <label for="normal">Нормально</label>
-      <input type="radio" id="hard" value="0.4" class="difficulty">
+      <input type="radio" id="hard" name="difficulty" value="0.4" class="difficulty">
       <label for="hard">Сложно</label>
     </div>
   </div>
@@ -29,6 +32,6 @@
 
 </body>
 
-<script src="sap.js"></script>
+<script src="sapper.js"></script>
 
 </html>
