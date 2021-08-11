@@ -1,11 +1,8 @@
 let bombFrequency = 0.2;
 
 const board = document.querySelectorAll('.board')[0];
-
 const restartBtn = document.querySelectorAll('.minesweeper-btn')[0];
 const endscreen = document.querySelectorAll('.endscreen')[0]
-
-const boardSizeBtn = document.getElementById('boardSize');
 const difficultyBtns = document.querySelectorAll('.difficulty');
 
 let cells;
@@ -16,6 +13,8 @@ let numberColors = ['#3498db', '#2ecc71', '#e74c3c', '#9b59b6', '#f1c40f', '#1ab
 let endscreenContent = { win: '<span>Вы выиграли!</span>', loose: '💣 БУМ! Конец игры.' };
 
 let overGame = false;
+
+
 
 const setup = function () {
   for (let i = 0; i < 100; i++) {
@@ -58,6 +57,9 @@ const setup = function () {
 
     cell.addEventListener('click', function (eve) {
       clickCell(cell);
+    });
+    cell.addEventListener('dblclick', function (eve) {
+      doubleClick(cell);
     });
   });
 
@@ -109,7 +111,13 @@ const clickCell = function (cell) {
   cell.classList.add('cell--checked');
 }
 
+const doubleClick = function (cell) {
+  if (overGame) return;
+  if (cell.classList.contains('cell--flagged')) return;
+  if (cell.classList.contains('cell--checked')) {
 
+  }
+}
 
 const checkCell = function (cell, coordinate) {
   let coords = coordinate.split(',');
